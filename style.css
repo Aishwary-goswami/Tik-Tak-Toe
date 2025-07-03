@@ -1,0 +1,181 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+.nav {
+    height: 5vh;
+    width: 100vw;
+    background: linear-gradient(to right, rgb(255, 134, 134), rgb(136, 136, 255), rgb(153, 255, 153));
+    font-size: x-large;
+    font-weight: 800;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boxtext {
+    color: white;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gameInfo {
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.box {
+    font-size: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.8s ease;
+
+    border: 1px solid white;
+}
+
+
+.box:hover {
+    background-color: rgb(141, 35, 255);
+    opacity: 1;
+}
+
+img {
+    height: 25vh;
+    margin-top: 20px;
+    display: none;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    margin-left: 20px;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+button {
+    height: 8vh;
+    width: 12vw;
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 20px;
+    margin-left: 50px;
+    background-color: #161a20;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    color:#f0f0f0;
+    position: relative;
+}
+button::after{
+    content:"";
+    top:-2px;
+    left: -2px;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    padding: 2px;
+    border-radius: 20px;
+    z-index:-1;
+    background-image: linear-gradient(to bottom right , #008cff , #e100ff);
+}
+button:hover{
+    z-index:0;
+    box-shadow: 30px 0 70px #008cff , -30px 0 70px #008cff;
+}
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.faded {
+    background-color: transparent !important;
+}
+
+@media (max-width:1200px) {
+    .box {
+        font-size: 28vw;
+    }
+
+    .gameContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 90vw;
+        height: 45vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        /* 👈 Each row = 1/3 of container height */
+        margin-left: 8vw;
+        margin-right: 5vw;
+    }
+
+    .gameInfo {
+        width: 90vw;
+        margin-top: 20px;
+        margin-left: 8vw;
+        margin-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    button {
+        height: 5vh;
+        width: 30vw;
+        font-size: larger;
+        font-weight: 500;
+        margin-left: 50px;
+    }
+
+    .bottombox {
+        padding-top: 20px;
+    }
+
+    img {
+        height: 25vh;
+        margin-left: 65px;
+        margin-top: 63px;
+        display: none;
+    }
+}
